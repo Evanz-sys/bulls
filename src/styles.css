@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.catalogo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.ficha-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.ficha-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.ficha-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  max-height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ficha-info {
+  padding: 1.2rem 1.5rem;
+  flex-grow: 1;
+}
+
+.ficha-info h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #1a237e;
+}
+
+.ficha-info p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.ficha-detalle {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.8rem;
+}
+
+.ficha-detalle h4 {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.ficha-detalle ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.ficha-detalle li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.ficha-video {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.controles button {
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controles button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.controles button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .titulo {
+    font-size: 2.2rem;
+  }
+
+  .ficha-img {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .ficha-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .ficha-img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ficha-info {
+    padding: 1rem;
+  }
+
+  .controles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controles button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .ficha-img {
+    max-height: 200px;
+  }
+}
